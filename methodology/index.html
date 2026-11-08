@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology · 7 Days Report</title>
+<meta name="description" content="How 7 Days Report builds its weekly factor rankings: universe, formulas, data sources and dates, exclusions, checks, known limits, and how the videos are made. Education only, not investment advice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"Methodology · 7 Days Report",
+ "description":"How the weekly factor rankings (P/B, P/E, FCF yield) are built: universe, formulas, sources, as-of dates, exclusions, checks and limits.",
+ "dateModified":"2026-11-08",
+ "inLanguage":"en",
+ "publisher":{"@type":"Organization","name":"7 Days Report","url":"https://www.youtube.com/@7DaysReport"},
+ "about":["Price-to-book ratio","Price-to-earnings ratio","Free cash flow yield","Stock screening methodology"]
+}
+</script>
+<style>
+:root{--bg:#EDEAE3;--panel:#F8F6F2;--ink:#060606;--muted:#55524C;--gold:#7A5C22;--hair:rgba(6,6,6,.14);--up:#0B6B45;--down:#A8243F}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 'Archivo',system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+.eyebrow{font:600 12px/1 'Archivo',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font:600 clamp(34px,6vw,48px)/1.1 'Source Serif 4',serif;margin:10px 0 12px}
+h2{font:600 24px/1.25 'Source Serif 4',serif;margin:44px 0 10px;padding-top:18px;border-top:1px solid var(--hair)}
+h3{font:600 17px/1.3 'Archivo',sans-serif;margin:22px 0 6px}
+p,li{color:var(--ink)} .muted{color:var(--muted)}
+.lede{font:500 italic 20px/1.5 'Source Serif 4',serif;color:var(--muted)}
+.note{background:var(--panel);border-left:3px solid var(--gold);padding:14px 16px;margin:18px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--hair)}
+th{font-weight:600;color:var(--muted);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+tbody tr:nth-child(odd){background:var(--panel)}
+code{font:500 14px/1.4 ui-monospace,Menlo,monospace;background:var(--panel);padding:1px 5px}
+a{color:var(--gold)}
+.wrap{overflow-x:auto}
+footer{margin-top:56px;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow">7 Days Report · Methodology</div>
+<h1>How the weekly boards are built</h1>
+<p class="lede">A ranking, not a buy list. Every board answers one narrow question with public data, shows its dates, and says what it can't tell you.</p>
+<p class="muted">Last updated: November 8, 2026 · Applies to The Weekly Board (Shorts) and The 2-Minute Check (videos).</p>
+
+<div class="note"><strong>Education only, not investment advice.</strong> We don't pick stocks, give price targets or tell anyone to buy or sell. A low ratio is a question to research, not an answer.</div>
+
+<h2>1. What we rank</h2>
+<p>Each week one Short ranks one factor across the same universe. A paired 2-minute video re-checks that Top 10 with two companion factors that catch the factor's usual trap.</p>
+<div class="wrap"><table>
+<thead><tr><th>Board</th><th>Formula</th><th>Order</th><th>2-minute check (both must pass)</th></tr></thead>
+<tbody>
+<tr><td>Lowest P/B</td><td>Market value ÷ shareholders' equity</td><td>Lowest first</td><td>ROE ≥ 10% · Liabilities ÷ equity ≤ 2.0</td></tr>
+<tr><td>Lowest P/E</td><td>Market value ÷ net income, trailing four quarters</td><td>Lowest first</td><td>Revenue growth (year over year) &gt; 0% · Free cash flow ≥ 70% of net income</td></tr>
+<tr><td>Highest FCF yield</td><td>(Operating cash flow − capital expenditure), trailing four quarters ÷ market value</td><td>Highest first</td><td>Revenue growth &gt; 0% · Liabilities ÷ equity ≤ 2.0</td></tr>
+</tbody></table></div>
+<p class="muted">The pass thresholds are common rules of thumb, published so you can disagree with them. They are our filter, not a correct answer. ROE is used only as a companion check: on its own it is distorted by buybacks that shrink equity toward zero.</p>
+
+<h2>2. Universe</h2>
+<ul>
+<li>The 500 largest US-listed companies by market value, counted by us each week (last sale price × shares outstanding from the company's latest SEC filing cover). We do not use any licensed index membership list.</li>
+<li><strong>Excluded from every board:</strong> banks, insurers, REITs and other financial companies (SEC industry codes 6000–6799), whose balance sheets make these ratios misleading; companies with more than one share class (one price can't value them); companies whose latest reported quarter ended before June 30, 2026; foreign filers without quarterly US reports; stocks with fewer than 20 IEX trades that day.</li>
+<li><strong>Per board:</strong> negative equity is excluded from P/B; loss-making companies are excluded from P/E.</li>
+</ul>
+
+<h2>3. Data sources and dates</h2>
+<div class="wrap"><table>
+<thead><tr><th>Item</th><th>Source</th><th>Date shown on screen</th></tr></thead>
+<tbody>
+<tr><td>Price</td><td>IEX Historical Data (TOPS), last regular-session trade on IEX, published the next day</td><td>"IEX last sale" + date (usually the Friday before)</td></tr>
+<tr><td>Net income, cash flow, revenue (trailing four quarters)</td><td>SEC EDGAR XBRL company facts (10-Q, 10-K)</td><td>Latest quarter end</td></tr>
+<tr><td>Equity, liabilities</td><td>SEC EDGAR XBRL, latest balance sheet</td><td>Balance-sheet date, per row</td></tr>
+<tr><td>Shares outstanding</td><td>SEC filing cover page</td><td>Filing date</td></tr>
+</tbody></table></div>
+<p class="muted">Data provided for free by IEX. By accessing or using IEX Historical Data, you agree to the <a href="https://www.iex.io/legal/hist-data-terms">IEX Historical Data Terms of Use</a>. SEC data: <a href="https://www.sec.gov/edgar">sec.gov/edgar</a>.</p>
+
+<h2>4. Checks before release</h2>
+<ol>
+<li>The No.1–No.3 rows are compared with the company's original 10-Q or 10-K by the operator.</li>
+<li>Every number on screen is compared automatically with the source table; any mismatch stops the upload.</li>
+<li>Week-over-week changes ("3 new · 3 out") are computed from last week's archived table, so each board shows what actually changed.</li>
+</ol>
+
+<h2>5. What a board can't tell you</h2>
+<ul>
+<li>Whether the company will earn more or less next year. All inputs are past results.</li>
+<li>One-off items. A single large gain can make P/E or FCF yield look cheap for a year.</li>
+<li>Industry differences. Energy and refining often rank high on P/E and FCF yield late in a profit cycle.</li>
+<li>Official closing prices. We show IEX's last sale, which for large companies is usually within about 0.1% of the official close, but is not the same thing.</li>
+<li>Different fiscal calendars. Quarter ends differ by company (for example Sep 26 vs Sep 30), so balance-sheet dates are shown per row.</li>
+</ul>
+
+<h2>6. How this was made</h2>
+<ul>
+<li><strong>Who:</strong> 7 Days Report is run by a small independent team that reviews every video before release. We have no business relationship with the companies shown and take no payment to include or exclude any company.</li>
+<li><strong>Software:</strong> the data is collected and ranked by our own scripts from the public sources above. Videos are rendered from templates; music is our own composition.</li>
+<li><strong>Review:</strong> a person checks every number, title and video against the sources before release.</li>
+</ul>
+
+<h2 id="corrections">7. Corrections</h2>
+<p>If a number is wrong, tell us in the comments of the video. We confirm against the source, pin a correction under the video within 24 hours, note it in the next episode and list it here.</p>
+<div class="wrap"><table>
+<thead><tr><th>Date</th><th>Episode</th><th>What changed</th></tr></thead>
+<tbody><tr><td colspan="3" class="muted">No corrections yet.</td></tr></tbody>
+</table></div>
+
+<h2>8. Change log</h2>
+<ul><li>2026-11-08: first version (P/B, P/E, FCF yield boards).</li></ul>
+
+<footer>
+<p>7 Days Report · <a href="https://www.youtube.com/@7DaysReport">youtube.com/@7DaysReport</a></p>
+<p>Education only, not investment advice. Past data does not predict future returns. You can lose money investing.</p>
+</footer>
+</main>
+</body>
+</html>
